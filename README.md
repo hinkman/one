@@ -3,4 +3,4 @@ one
 
 one
 
-update test
+update __test__
