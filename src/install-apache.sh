@@ -1,3 +1,3 @@
 #!/bin/bash
 
-apt-get -q install -qy apache
+apt-get install -qq apache
