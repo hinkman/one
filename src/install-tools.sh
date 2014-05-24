@@ -1,4 +1,4 @@
 #!/bin/bash
 
-apt-get install -y dnsutils
-apt-get install -y mtr
+apt-get -s install -y dnsutils
+apt-get -s install -y mtr
