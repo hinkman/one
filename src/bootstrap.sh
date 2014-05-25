@@ -25,7 +25,7 @@ for tag in $TAGS ; do
 		echo "Installing apache"
 		curl -sLk -u ${GITHUBUSER}:${GITHUBPASS} -H 'Accept: application/vnd.github.v3.raw' https://api.github.com/repos/hinkman/one/contents/src/install-apache.sh | sudo bash;;
 
-  	dns )
+  	tools )
 		echo "Installing dns/net tools"
 		curl -sLk -u ${GITHUBUSER}:${GITHUBPASS} -H 'Accept: application/vnd.github.v3.raw' https://api.github.com/repos/hinkman/one/contents/src/install-tools.sh | sudo bash;;
 
