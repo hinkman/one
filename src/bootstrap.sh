@@ -1,6 +1,8 @@
 #!/bin/bash
 
 #VARS
+DATE=${DATE:-`date +%Y%m%d%H%M%S`}
+LOG=${LOG:-/tmp/bootstrap-$DATE.log}
 TAGS=`curl -s "http://metadata.google.internal/computeMetadata/v1/instance/tags" -H "Metadata-Flavor: Google" | sed -e 's/[",[]/ /g; s/]//'`
 INSTANCENAME=`hostname -s`
 
