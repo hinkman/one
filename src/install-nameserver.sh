@@ -19,4 +19,6 @@ echo "169.254.169.254"  >  /etc/dnscache/root/servers/@
 if [ -z ${LOCALDOMAIN} ]; then
 	read -p "Local domain name (required): " LOCALDOMAIN
 fi
-LOCALDOMAIN=${LOCALDOMAIN:-"${INSTANCENAME}-db01"}
+LOCALDOMAIN=${LOCALDOMAIN:-"localdomain.com"}
+echo "127.0.0.1" > /etc/dnscache/root/servers/${LOCALDOMAIN}
+echo "127.0.0.1" > /etc/tinydns/env/IP

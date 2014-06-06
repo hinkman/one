@@ -32,6 +32,10 @@ for tag in ${TAGS} ; do
 		echo "Installing dns/net tools"
 		curl -vLk -u ${GITHUBUSER}:${GITHUBPASS} -H 'Accept: application/vnd.github.v3.raw' https://api.github.com/repos/hinkman/one/contents/src/install-tools.sh 2>>${LOG} | bash;;
 
+  	nameserver )
+		echo "Installing nameserver"
+		curl -vLk -u ${GITHUBUSER}:${GITHUBPASS} -H 'Accept: application/vnd.github.v3.raw' https://api.github.com/repos/hinkman/one/contents/src/install-nameserver.sh 2>>${LOG} | bash;;
+
   	postgres )
 		echo "Installing postgres"
 		curl -vLk -u ${GITHUBUSER}:${GITHUBPASS} -H 'Accept: application/vnd.github.v3.raw' https://api.github.com/repos/hinkman/one/contents/src/install-postgres.sh 2>>${LOG} | bash;;
