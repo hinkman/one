@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Starting install..."
+
 #VARS
 DATE=${DATE:-`date +%Y%m%d%H%M%S`}
 LOG=${LOG:-/tmp/bootstrap-$DATE.log}

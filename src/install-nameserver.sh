@@ -3,10 +3,8 @@
 DATE=${DATE:-`date +%Y%m%d%H%M%S`}
 LOG=${LOG:-/tmp/install-nameserver-$DATE.log}
 
-cat >> /etc/apt/sources.list <EOF
-deb http://ftp.de.debian.org/debian sid main
-deb http://ftp.de.debian.org/debian experimental main
-EOF
+echo "deb http://ftp.de.debian.org/debian sid main" >> /etc/apt/sources.list
+echo "deb http://ftp.de.debian.org/debian experimental main" >> /etc/apt/sources.list
 apt-get update >> ${LOG} 2>&1
 apt-get install -y dnscache-run  >> ${LOG} 2>&1
 apt-get install -y tinydns-run  >> ${LOG} 2>&1
