@@ -38,6 +38,10 @@ for tag in ${TAGS} ; do
 		echo "Installing nameserver"
 		curl -vLk -u ${GITHUBUSER}:${GITHUBPASS} -H 'Accept: application/vnd.github.v3.raw' https://api.github.com/repos/hinkman/one/contents/src/install-nameserver.sh 2>>${LOG} | bash;;
 
+  	krb )
+		echo "Installing krb"
+		curl -vLk -u ${GITHUBUSER}:${GITHUBPASS} -H 'Accept: application/vnd.github.v3.raw' https://api.github.com/repos/hinkman/one/contents/src/install-krb.sh 2>>${LOG} | bash;;
+
   	postgres )
 		echo "Installing postgres"
 		curl -vLk -u ${GITHUBUSER}:${GITHUBPASS} -H 'Accept: application/vnd.github.v3.raw' https://api.github.com/repos/hinkman/one/contents/src/install-postgres.sh 2>>${LOG} | bash;;
