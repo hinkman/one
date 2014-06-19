@@ -31,3 +31,11 @@ echo "&hinkman.com::dev-admin01.hinkman.com.:3600" >> /etc/tinydns/root/data
 echo ".hinkman.com:127.0.0.1:a:3600" >> /etc/tinydns/root/data
 echo "=dev-admin01.hinkman.com.:10.240.99.77:3600" >> /etc/tinydns/root/data
 echo "=robot.hinkman.com.:10.240.69.249:3600" >> /etc/tinydns/root/data
+
+# &ocsoasis.us::qa-admin01.ocsoasis.us.:3600
+# .ocsoasis.us:127.0.0.1:a:3600
+# .20.172.in-addr.arpa:127.0.0.1:a:3600
+# =qa-admin01.ocsoasis.us.:172.20.118.131:3600
+# Ckrb.ocsoasis.us.:qa-admin01.ocsoasis.us.:3600
+# Cloghost.ocsoasis.us.:qa-admin01.ocsoasis.us.:3600
+# Cmailhost.ocsoasis.us.:qa-admin01.ocsoasis.us.:3600

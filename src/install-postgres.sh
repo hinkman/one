@@ -7,14 +7,14 @@ ZONE=${ZONE:-`curl -vL "http://metadata.google.internal/computeMetadata/v1/insta
 INSTANCENAME=${INSTANCENAME:-`hostname -s`}
 
 if [ -z ${DBDRIVENAME} ]; then
-	read -p "Database drive name [${INSTANCENAME}-db01]: " DBDRIVENAME
+	read -p "Database drive name [${INSTANCENAME}-d01]: " DBDRIVENAME
 fi
 DBDRIVENAME=${DBDRIVENAME:-"${INSTANCENAME}-db01"}
 
 if [ -z ${DBDRIVESIZE} ]; then
 	read -p "Database drive size (GB) [500]: " DBDRIVESIZE
 fi
-DBDRIVESIZE=${DBDRIVESIZE:-500}
+DBDRIVESIZE=${DBDRIVESIZE:-"500"}
 
 echo Creating drive...
 gcutil --service_version="v1" --project="${PROJECTID}" adddisk "${DBDRIVENAME}" --size_gb="${DBDRIVESIZE}" --zone="${ZONE}" >> ${LOG} 2>&1
